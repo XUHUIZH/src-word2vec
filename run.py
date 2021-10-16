@@ -28,7 +28,7 @@ tokens = dataset.tokens()
 n_words = len(tokens)
 
 # We are going to train 10-dimensional vectors for this assignment
-dim_vectors = 80
+dim_vectors = 50
 
 # Context size
 C = 5
@@ -45,7 +45,7 @@ word_vectors = np.concatenate(
 word_vectors = sgd(
     lambda vec: word2vec_sgd_wrapper(skipgram, tokens, vec, dataset, C,
                                      neg_sampling_loss_and_gradient),
-    word_vectors, 0.3, 4, None, False, PRINT_EVERY=1)
+    word_vectors, 0.3, 10, None, False, PRINT_EVERY=1)
 # Note that normalization is not called here. This is not a bug,
 # normalizing during training loses the notion of length.
 
