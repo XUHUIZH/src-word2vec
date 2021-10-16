@@ -66,7 +66,7 @@ class StanfordSentiment:
                 sentences += [[w.lower() for w in splitted]]
         '''
         df = pd.read_csv(self.path + "/sample_sents_all.csv")
-        for s in list(df['sent']):
+        for s in list(df['sent'])[:30000]:
             splitted = s.strip().split()
             sentences += [[w.lower() for w in splitted]]
         self._sentences = sentences

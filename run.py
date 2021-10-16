@@ -28,7 +28,7 @@ tokens = dataset.tokens()
 n_words = len(tokens)
 
 # We are going to train 10-dimensional vectors for this assignment
-dim_vectors = 100
+dim_vectors = 80
 
 # Context size
 C = 5
